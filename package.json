@@ -1,0 +1,11 @@
+{
+    "name": "sample-app",
+    "main": "server.js",
+    "description":"My first sample app with a mean stack",
+    "dependencies": {
+        "express" : "~4.9.4",
+        "mongoose" : "~3.8.16",
+        "body-parser" : "~1.8.3",
+        "method-override" : "~2.2.0"
+    }
+}
