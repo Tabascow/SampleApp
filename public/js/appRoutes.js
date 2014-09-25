@@ -1,23 +1,38 @@
-angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+angular.module('AppRoutes',[]).config(function($stateProvider,$urlRouterProvider,$locationProvider) {
 
-	$routeProvider
+    $urlRouterProvider.otherwise("/");
 
-		// home page
-		.when('/', {
-			templateUrl: 'views/home.html',
-			controller: 'MainController'
-		})
+    $stateProvider
+        .state('home', {
+            url:'/',
+            templateUrl: 'views/home.html',
+            controller: 'MainController'
+        })
 
-		.when('/nerds', {
-			templateUrl: 'views/nerd.html',
-			controller: 'NerdController'
-		})
+        .state('nerds', {
+            url:'/nerds',
+            templateUrl: 'views/nerd.html',
+            controller: 'NerdController'
+        })
 
-		.when('/expenses', {
-			templateUrl: 'views/expense.html',
-			controller: 'ExpenseController'
-		});
+        .state('expenses', {
+            url:'/expenses',
+            templateUrl: 'views/expenses.html',
+            controller: 'ExpenseListController'
+        })
 
-	$locationProvider.html5Mode(true);
+        .state('newExpense',{
+            url:'/expenses/new',
+            templateUrl:'views/expense-add.html',
+            controller:'ExpenseCreateController'
+        })
 
-}]);
+        .state('editExpense',{
+            url:'/expenses/:id/edit',
+            templateUrl:'views/expense-edit.html',
+            controller:'ExpenseEditController'
+        })
+
+    $locationProvider.html5Mode(true);
+
+});

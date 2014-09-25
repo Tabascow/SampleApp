@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<base href="/">
+    <base href="/">
 
-	<title>Starter Node and Angular</title>
+	<title>R&D</title>
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
@@ -12,7 +12,8 @@
 
 	<!-- JS -->
 	<script src="libs/angular/angular.min.js"></script>
-	<script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/angular-resource/angular-resource.min.js"></script>
+    <script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
 
 	<!-- ANGULAR CUSTOM -->
 	<script src="js/controllers/MainCtrl.js"></script>
@@ -25,20 +26,20 @@
 </head>
 <body ng-app="sampleApp">
 <div class="container">
-	
+
 	<!-- HEADER -->
 	<nav class="navbar navbar-inverse">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/">D&P</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li><a href="/nerds">Nerds</a></li>
-			<li><a href="/expenses">Dépenses</a></li>
+			<li><a ui-sref="nerds">Nerds</a></li>
+			<li><a ui-sref="expenses">Dépenses</a></li>
 		</ul>
 	</nav>
 
 	<!-- ANGULAR DYNAMIC CONTENT -->
-	<div ng-view></div>
+	<ui-view></ui-view>
 
 </div>
 </body>

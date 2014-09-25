@@ -11,6 +11,7 @@
     <orderEntry type="library" name="method-override-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="angularjs-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="SampleApp node_modules" level="project" />
+    <orderEntry type="library" name="angular" level="application" />
   </component>
 </module>
 
