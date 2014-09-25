@@ -1,4 +1,5 @@
-angular.module('MainCtrl',[])
-    .controller('MainController',function($scope){
-        $scope.tagLine = "Bienvenue dans le controller principal";
-    });
+angular.module('MainCtrl', []).controller('MainController', function($scope) {
+
+	$scope.tagline = 'To the moon and back!';	
+
+});
