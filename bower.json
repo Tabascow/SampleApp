@@ -1,12 +1,13 @@
 {
-    "name": "sample-app-angular",
-    "version": "1.0.0",
-    "dependencies": {
-        "bootstrap": "latest",
-        "font-awesome": "latest",
-        "animate.css": "latest",
-        "angular": "latest",
-        "angular-ui-router": "latest",
-        "angular-resource":"latest"
-    }
+  "name": "sample-app-angular",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest",
+    "angular": "latest",
+    "angular-ui-router": "latest",
+    "angular-resource": "latest",
+    "angular-growl-notifications": "~2.1.1"
+  }
 }

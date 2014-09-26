@@ -5,8 +5,7 @@ angular.module('ExpenseCtrl', [])
         $scope.deleteExpense = function (expense) {
             expense.$delete(function () {
                 $scope.expenses.splice($scope.expenses.indexOf(expense),1);
-            },function(errorResult){
-                console.log(errorResult);
+            },function(error){
             })
         }
     })
@@ -15,6 +14,8 @@ angular.module('ExpenseCtrl', [])
         $scope.addExpense = function(){
             $scope.expense.$save(function () {
                 $state.go('expenses');
+            },function(error){
+
             })};
     })
     .controller('ExpenseEditController', function ($scope, Expense, $stateParams, $state) {
@@ -23,6 +24,9 @@ angular.module('ExpenseCtrl', [])
         $scope.updateExpense = function () {
             $scope.expense.$update(function () {
                 $state.go('expenses');
+
+            },function(error){
+
             })
         }
     });
