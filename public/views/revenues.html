@@ -1,0 +1,25 @@
+	<h1>Les dépenses</h1>
+    <a ui-sref="newRevenue" class="btn-primary btn-lg">Nouvelle recette</a>
+
+    <table class="table table-striped">
+        <tr>
+            <td>Titre</td>
+            <td>Date</td>
+            <td>Montant en cash</td>
+            <td>Montant en cheque</td>
+            <td>Montant en CB</td>
+            <td>Détails</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr ng-repeat="revenue in revenues">
+            <td>{{revenue.title}}</td>
+            <td>{{revenue.date}}</td>
+            <td>{{revenue.amountInCash}}</td>
+            <td>{{revenue.amountInCheque}}</td>
+            <td>{{revenue.amountInCb}}</td>
+            <td>{{revenue.details}}</td>
+            <td><a class="btn btn-primary" ui-sref="editRevenue(revenue._id)">Editer</a></td>
+            <td><a class="btn btn-primary" ng-click="deleteRevenue(revenue)">Supprimer</a> </td>
+        </tr>
+    </table>

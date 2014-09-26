@@ -1,1 +1,1 @@
-angular.module('sampleApp', ['ngResource','ui.router', 'AppRoutes','MainCtrl', 'NerdCtrl', 'NerdService', 'ExpenseCtrl', 'ExpenseService']);
+angular.module('sampleApp', ['ngResource','ui.router', 'AppRoutes','MainCtrl', 'RevenueCtrl', 'RevenueService', 'ExpenseCtrl', 'ExpenseService']);

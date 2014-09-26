@@ -9,10 +9,22 @@ angular.module('AppRoutes',[]).config(function($stateProvider,$urlRouterProvider
             controller: 'MainController'
         })
 
-        .state('nerds', {
-            url:'/nerds',
-            templateUrl: 'views/nerd.html',
-            controller: 'NerdController'
+        .state('revenues', {
+            url:'/revenues',
+            templateUrl: 'views/revenues.html',
+            controller: 'RevenueListController'
+        })
+
+        .state('newRevenue',{
+            url:'/revenues/new',
+            templateUrl:'views/revenue-add.html',
+            controller:'RevenueCreateController'
+        })
+
+        .state('editRevenue',{
+            url:'/revenues/:id/edit',
+            templateUrl:'views/revenue-edit.html',
+            controller:'RevenueEditController'
         })
 
         .state('expenses', {
