@@ -40,7 +40,7 @@
 			<li><a ui-sref="expenses">Dépenses</a></li>
 		</ul>
 	</nav>
-    <div>
+    <div class="alerts">
         <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="alert.close()">{{ alert.msg }}</alert>
     </div>
 

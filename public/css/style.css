@@ -1,1 +1,14 @@
 body { padding-top:30px; }
+
+.alerts {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    z-index: 10000;
+}
+
+.alerts .alert {
+    position: relative;
+}
