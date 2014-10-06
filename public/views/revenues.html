@@ -14,12 +14,12 @@
         </tr>
         <tr ng-repeat="revenue in revenues">
             <td>{{revenue.title}}</td>
-            <td>{{revenue.date}}</td>
+            <td>{{revenue.date | date:'dd/MM/yyyy'}}</td>
             <td>{{revenue.amountInCash}}</td>
             <td>{{revenue.amountInCheque}}</td>
             <td>{{revenue.amountInCb}}</td>
             <td>{{revenue.details}}</td>
-            <td><a class="btn btn-primary" ui-sref="editRevenue(revenue._id)">Editer</a></td>
+            <td><a class="btn btn-primary" ui-sref="editRevenue({id:revenue._id})">Editer</a></td>
             <td><a class="btn btn-primary" ng-click="deleteRevenue(revenue)">Supprimer</a> </td>
         </tr>
     </table>

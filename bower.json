@@ -8,6 +8,6 @@
     "angular": "latest",
     "angular-ui-router": "latest",
     "angular-resource": "latest",
-    "angular-growl-notifications": "~2.1.1"
+    "angular-bootstrap": "~0.11.2"
   }
 }

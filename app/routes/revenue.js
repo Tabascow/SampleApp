@@ -6,8 +6,10 @@ module.exports = function(router){
             var revenue = new Revenue();
             revenue.title = req.body.title;
             revenue.date = new Date(req.body.date);
-            revenue.amount= req.body.amount;
-            revenue.paiementMethod= req.body.paiementMethod;
+            revenue.amountInCash= req.body.amountInCash;
+            revenue.amountInCheque= req.body.amountInCheque;
+            revenue.amountInCb= req.body.amountInCb;
+            revenue.details= req.body.details;
 
             revenue.save(function(err){
                 if(err){res.send(err);}
@@ -37,8 +39,10 @@ module.exports = function(router){
 
                 revenue.title = req.body.title;
                 revenue.date = new Date(req.body.date);
-                revenue.amount= req.body.amount;
-                revenue.paiementMethod= req.body.paiementMethod;
+                revenue.amountInCash= req.body.amountInCash;
+                revenue.amountInCheque= req.body.amountInCheque;
+                revenue.amountInCb= req.body.amountInCb;
+                revenue.details= req.body.details;
 
                 revenue.save(function(err){
                     if(err){res.send(err);}
