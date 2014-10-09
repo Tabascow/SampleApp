@@ -44,6 +44,11 @@ angular.module('AppRoutes',[]).config(function($stateProvider,$urlRouterProvider
             templateUrl:'views/expense-edit.html',
             controller:'ExpenseEditController'
         })
+        .state('login',{
+            url:'/login',
+            templateUrl:'views/login.html',
+            access: { requiredLogin: false }
+        })
 
     $locationProvider.html5Mode(true);
 

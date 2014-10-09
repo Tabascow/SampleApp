@@ -13,6 +13,7 @@ var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var db = require('./config/db');
+require('./config/passport')(passport); // pass passport for configuration
 // configuration ===========================================
 
 
@@ -30,6 +31,7 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
 
 app.set('view engine','ejs');
+
 
 //require for password
 app.use(session({secret: 'ilovenode'}));
