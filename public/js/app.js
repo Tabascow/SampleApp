@@ -11,8 +11,13 @@ var app= angular.module('sampleApp',
         'RevenueService',
         'ExpenseCtrl',
         'ExpenseService',
-        'AdminCtrl'
+        'AdminCtrl',
+        'ProfileCtrl'
     ]);
+
+var options = {};
+options.api = {};
+options.api.base_url = "http://localhost:8080";
 
 app.config(function ($httpProvider) {
     $httpProvider.interceptors.push('TokenInterceptor');

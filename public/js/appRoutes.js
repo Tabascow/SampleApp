@@ -47,7 +47,12 @@ angular.module('AppRoutes',[]).config(function($stateProvider,$urlRouterProvider
         .state('login',{
             url:'/login',
             templateUrl:'views/login.html',
-            access: { requiredLogin: false }
+            controller: 'AdminUserCtrl'
+        })
+        .state('profile',{
+            url:'/profile',
+            templateUrl:'views/profile.html',
+            controller: 'ProfileController'
         })
 
     $locationProvider.html5Mode(true);

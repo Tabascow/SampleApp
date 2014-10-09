@@ -1,14 +1,12 @@
-angular.module('AdminCtrl', []).controller('AdminUserCtrl', ['$scope', '$location', '$window', 'UserService', 'AuthenticationService',
-    function AdminUserCtrl($scope, $location, $window, UserService, AuthenticationService) {
+angular.module('AdminCtrl', []).controller('AdminUserCtrl', function AdminUserCtrl($scope, $location, $window, UserService, AuthenticationService) {
 
-        //Admin User Controller (signIn, logOut)
         $scope.signIn = function signIn(username, password) {
             if (username != null && password != null) {
 
                 UserService.signIn(username, password).success(function(data) {
                     AuthenticationService.isAuthenticated = true;
                     $window.sessionStorage.token = data.token;
-                    $location.path("/admin");
+                    $location.path("/profile");
                 }).error(function(status, data) {
                     console.log(status);
                     console.log(data);
@@ -29,7 +27,7 @@ angular.module('AdminCtrl', []).controller('AdminUserCtrl', ['$scope', '$locatio
                 });
             }
             else {
-                $location.path("/admin/login");
+                $location.path("/login");
             }
         }
 
@@ -47,4 +45,4 @@ angular.module('AdminCtrl', []).controller('AdminUserCtrl', ['$scope', '$locatio
             }
         }
     }
-]);
+);
